@@ -1,0 +1,30 @@
+// less混入  提取一些css公用的代码
+
+// 演示混入   类的混入（选择器）
+// .abc{
+//     width: 100px;
+//     height: 100px;
+// }
+// // 复用
+// .box{
+//     .abc()
+// }
+
+// // 函数的混入
+// .abc2(@width){
+//     width: @width;
+//     height: @width;
+// }
+// // 复用
+// .box2{
+//     .abc2(300px)
+// }
+// 鼠标经过上移阴影动画
+.hoverShadow () {
+    // 过度
+  transition: all .5s;
+  &:hover {
+    transform: translate3d(0,-3px,0);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  }
+}
